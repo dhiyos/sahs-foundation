@@ -50,7 +50,7 @@ export function StickyPillarNav() {
                     : "border-transparent text-ink-600 hover:text-ink-900"
                 }`}
               >
-                {p.title}
+                {p.tabLabel ?? p.title}
               </a>
             );
           })}

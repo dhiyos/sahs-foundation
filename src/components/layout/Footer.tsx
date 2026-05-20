@@ -4,11 +4,11 @@ import { Logo } from "./Logo";
 import { site } from "../../lib/site";
 
 const SOCIAL = [
-  { href: site.social.instagram, label: "Instagram", Icon: Instagram },
-  { href: site.social.facebook, label: "Facebook", Icon: Facebook },
-  { href: site.social.linkedin, label: "LinkedIn", Icon: Linkedin },
-  { href: site.social.x, label: "X", Icon: Twitter },
-];
+  { entry: site.social.instagram, label: "Instagram", Icon: Instagram },
+  { entry: site.social.facebook,  label: "Facebook",  Icon: Facebook },
+  { entry: site.social.linkedin,  label: "LinkedIn",  Icon: Linkedin },
+  { entry: site.social.x,         label: "X",         Icon: Twitter },
+].filter((s) => s.entry.live);
 
 const headingClass =
   "text-[11px] font-medium tracking-[0.25em] uppercase text-teal-600 mb-5";
@@ -54,23 +54,25 @@ export function Footer() {
 
           <div>
             <h2 className={headingClass}>Follow</h2>
-            <p className="text-sm text-white/70 mb-4">
+            <p className="text-sm text-white/70">
               {site.social.handle} on all platforms
             </p>
-            <div className="flex items-center gap-3">
-              {SOCIAL.map(({ href, label, Icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/40 transition focus:outline-none focus:ring-2 focus:ring-coral-600 focus:ring-offset-2 focus:ring-offset-navy-900"
-                >
-                  <Icon className="w-4 h-4" strokeWidth={2} />
-                </a>
-              ))}
-            </div>
+            {SOCIAL.length > 0 && (
+              <div className="mt-4 flex items-center gap-3">
+                {SOCIAL.map(({ entry, label, Icon }) => (
+                  <a
+                    key={label}
+                    href={entry.url}
+                    aria-label={label}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/40 transition focus:outline-none focus:ring-2 focus:ring-coral-600 focus:ring-offset-2 focus:ring-offset-navy-900"
+                  >
+                    <Icon className="w-4 h-4" strokeWidth={2} />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </Container>

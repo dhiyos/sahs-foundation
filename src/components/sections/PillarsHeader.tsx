@@ -8,7 +8,7 @@ export function PillarsHeader() {
         <h2 className="font-serif text-white text-[26px] md:text-[32px] font-medium leading-tight">
           {home.pillarsHeader.heading}
         </h2>
-        <p className="mt-3 text-[11px] tracking-[0.25em] uppercase text-white/60">
+        <p className="mt-3 text-sm md:text-base text-white/70 max-w-2xl mx-auto">
           {home.pillarsHeader.sub}
         </p>
       </Container>

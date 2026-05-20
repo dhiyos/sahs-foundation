@@ -2,12 +2,12 @@ export const site = {
   name: "SAHS Foundation",
   url: "https://sahsfoundation.org",
   defaultOgImage: "/og-default.jpg",
-  tagline: "Committed to Humanity · Backed by Integrity · Driven by Compassion",
+  tagline: "Committed to Care · Guided by Integrity · Built for Responsible Impact",
   registration: {
     type: "Registered Non-Profit Trust",
     number: "UP/2022/0307306",
   },
-  copyright: "© 2026 SAHS Foundation · A SAHS Group of Companies Initiative",
+  copyright: "© 2026 SAHS Foundation · An SAHS Group social initiative",
   address: {
     line1: "A 9, SAHS Tower, Sector 49",
     line2: "Noida 201301, Uttar Pradesh, India",
@@ -17,16 +17,16 @@ export const site = {
   email: "info@sahsfoundation.org",
   social: {
     handle: "@sahsfoundation",
-    instagram: "https://instagram.com/sahsfoundation",
-    facebook: "https://facebook.com/sahsfoundation",
-    linkedin: "https://linkedin.com/company/sahsfoundation",
-    x: "https://x.com/sahsfoundation",
+    // Set `live: true` once the corresponding handle is published.
+    instagram: { url: "https://instagram.com/sahsfoundation", live: false },
+    facebook:  { url: "https://facebook.com/sahsfoundation",  live: false },
+    linkedin:  { url: "https://linkedin.com/company/sahsfoundation", live: false },
+    x:         { url: "https://x.com/sahsfoundation",         live: false },
   },
 } as const;
 
 export const nav = [
   { to: "/about", label: "About" },
   { to: "/initiatives", label: "Initiatives" },
-  { to: "/impact", label: "Impact" },
   { to: "/get-involved", label: "Get Involved" },
 ] as const;

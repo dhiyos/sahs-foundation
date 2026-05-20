@@ -41,8 +41,8 @@ const columnHeading =
 export function InitiativesPillarSection({ pillar, alt }: InitiativesPillarSectionProps) {
   const Icon = pillar.icon;
   const tokens = palette[pillar.pillar];
-  const whatWeDoItems = pillar.whatWeDo.split(/,\s*/).filter(Boolean);
-  const whoWeServeItems = [pillar.whoWeServe];
+  const eyebrowLabel = (pillar.tabLabel ?? pillar.title).toUpperCase();
+  const heading = pillar.sectionHeading ?? pillar.title;
 
   return (
     <section
@@ -57,23 +57,23 @@ export function InitiativesPillarSection({ pillar, alt }: InitiativesPillarSecti
           >
             <Icon className="w-7 h-7 text-white" strokeWidth={2} />
           </div>
-          <Eyebrow>{pillar.title}</Eyebrow>
+          <Eyebrow>{eyebrowLabel}</Eyebrow>
           <h2 className="font-serif text-[28px] md:text-[36px] font-medium text-ink-900 leading-tight mb-5">
-            {pillar.title}
+            {heading}
           </h2>
           <p className="text-base md:text-lg text-ink-600 leading-[1.7]">
-            {pillar.long}
+            {pillar.intro}
           </p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl">
           <div>
             <h3 className={columnHeading}>What we do</h3>
-            <BulletList items={whatWeDoItems} />
+            <BulletList items={pillar.whatWeDo} />
           </div>
           <div>
             <h3 className={columnHeading}>Who we serve</h3>
-            <BulletList items={whoWeServeItems} />
+            <p className="text-sm text-ink-900 leading-relaxed">{pillar.whoWeServe}</p>
           </div>
         </div>
       </Container>

@@ -62,8 +62,8 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Button href="/get-involved#donate" variant="primary" className="px-5 py-2.5">
-            Donate
+          <Button href="/get-involved#partner" variant="primary" className="px-5 py-2.5">
+            Partner With Us
           </Button>
         </div>
 
@@ -99,8 +99,8 @@ export function Header() {
                   {item.label}
                 </NavLink>
               ))}
-              <Button href="/get-involved#donate" variant="primary" className="mt-4 w-full">
-                Donate
+              <Button href="/get-involved#partner" variant="primary" className="mt-4 w-full">
+                Partner With Us
               </Button>
             </nav>
           </Container>

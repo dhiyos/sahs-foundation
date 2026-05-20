@@ -3,7 +3,6 @@ import { Layout } from "./components/layout/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Initiatives from "./pages/Initiatives";
-import Impact from "./pages/Impact";
 import GetInvolved from "./pages/GetInvolved";
 
 export default function App() {
@@ -13,7 +12,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/initiatives" element={<Initiatives />} />
-        <Route path="/impact" element={<Impact />} />
         <Route path="/get-involved" element={<GetInvolved />} />
       </Routes>
     </Layout>

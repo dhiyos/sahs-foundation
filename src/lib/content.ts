@@ -1,72 +1,90 @@
 export const home = {
   hero: {
-    eyebrow: "A GLOBAL INITIATIVE",
-    headline: "Transforming lives across borders",
-    sub: "Empowering the deserving. Nurturing the vulnerable. Building communities of dignity & hope.",
+    eyebrow: "A Registered Non-Profit Trust",
+    headline: "Supporting lives with dignity, care, and accountability",
+    sub: "SAHS Foundation works through focused social initiatives in community welfare, animal care, health, sanitation, and environmental responsibility.",
     trustBadge: "REGISTERED NON-PROFIT TRUST · UP/2022/0307306",
-    primaryCta: { label: "Support a Cause", to: "/get-involved#donate" },
-    secondaryCta: { label: "Our Initiatives", to: "/initiatives" },
+    primaryCta: { label: "Partner With Us", to: "/get-involved#partner" },
+    secondaryCta: { label: "Explore Initiatives", to: "/initiatives" },
   },
   whoWeAre: {
     eyebrow: "WHO WE ARE",
     body:
-      "SAHS Foundation is the humanitarian arm of the SAHS Group of Companies — a multi-national conglomerate dedicated to giving back to society. A major portion of the Group's profits is channelled directly into this foundation, fuelling impactful programs that uplift the most vulnerable members of our communities across India and beyond.",
+      "SAHS Foundation is the humanitarian initiative of the SAHS Group, created to support structured, accountable, and need-based social impact. The foundation focuses on community welfare, animal care, health, sanitation, environmental responsibility, and support for vulnerable groups through direct initiatives and trusted field partnerships.",
     info: [
       { label: "Office", value: "SAHS Tower, Sector 49, Noida" },
-      { label: "Reach", value: "International" },
-      { label: "Reg", value: "UP/2022/0307306" },
+      { label: "Focus", value: "Community Welfare & Animal Care" },
+      { label: "Registration", value: "UP/2022/0307306" },
     ],
   },
   pillarsHeader: {
-    heading: "Our pillars of change",
-    sub: "Eight core missions · Countless lives transformed",
+    heading: "Our Focus Areas",
+    sub: "Structured initiatives across community welfare, health, animal care, sanitation, and environmental responsibility.",
   },
   approach: {
-    eyebrow: "OUR APPROACH",
-    heading: "How we create impact",
+    eyebrow: "OUR METHOD",
+    heading: "How We Work",
+    sub: "A simple, accountable process from need identification to responsible delivery.",
     steps: [
       {
-        title: "Identify & reach",
+        title: "Identify Needs",
         description:
-          "We start at the ground — finding individuals and communities whose needs are real, urgent, and often unseen.",
+          "We begin by understanding real needs through field inputs, local references, and direct community conversations.",
       },
       {
-        title: "Assess & plan",
+        title: "Assess & Plan",
         description:
-          "Each case is assessed on its own merits. Programs are designed around outcomes, not optics.",
+          "Each initiative is reviewed for urgency, suitability, budget, and expected outcome before support is committed.",
       },
       {
-        title: "Deliver & support",
+        title: "Deliver Support",
         description:
-          "We deploy resources directly, with field partners and the SAHS Group's operational backing behind every program.",
+          "Support is delivered directly or through trusted partners, with documentation and basic reporting.",
       },
       {
-        title: "Sustain & scale",
+        title: "Review & Continue",
         description:
-          "Successful models are scaled into self-sustaining ecosystems that outlast the original intervention.",
+          "We review outcomes, document learnings, and continue or expand initiatives where they create meaningful value.",
       },
     ],
   },
   trust: {
     cells: [
-      { value: "100%", label: "TRANSPARENT OPERATIONS" },
-      { value: "Pan India", label: "PROGRAM REACH" },
-      { value: "Intl.", label: "CORPORATE BACKING" },
-      { value: "Zero", label: "PROFIT MOTIVE" },
+      {
+        icon: "shield",
+        label: "Transparent Governance",
+        sub: "Accountable records and responsible use of resources",
+      },
+      {
+        icon: "map",
+        label: "India-Focused Work",
+        sub: "Community-led initiatives with a long-term outlook",
+      },
+      {
+        icon: "building",
+        label: "SAHS Group Support",
+        sub: "Backed by responsible enterprise commitment",
+      },
+      {
+        icon: "heart",
+        label: "Not-for-Profit Purpose",
+        sub: "Structured for social welfare and community benefit",
+      },
     ],
   },
   guidingPrinciple: {
-    heading: "Our guiding principle",
+    eyebrow: "OUR COMMITMENT",
+    heading: "Guided by dignity, accountability, and care",
     body:
-      "Every human being deserves a life of dignity. SAHS Foundation stands as a bridge between abundance and need — transforming corporate success into real, lasting social impact, one life at a time.",
+      "SAHS Foundation exists to support people, animals, and communities through focused, responsible social initiatives. We work where support can be delivered with care, documented with accountability, and sustained through trusted partnerships.",
   },
   finalCta: {
     heading: "Be part of the change",
     body:
       "Whether you contribute resources, partner with us as an organisation, or give your time — every effort creates impact.",
     buttons: [
-      { label: "Donate Now", to: "/get-involved#donate", variant: "primary" as const },
-      { label: "Partner With Us", to: "/get-involved#partner", variant: "secondary" as const },
+      { label: "Partner With Us", to: "/get-involved#partner", variant: "primary" as const },
+      { label: "Explore Initiatives", to: "/initiatives", variant: "secondary" as const },
       { label: "Volunteer", to: "/get-involved#volunteer", variant: "ghost" as const },
     ],
   },
@@ -76,39 +94,42 @@ export const about = {
   hero: {
     eyebrow: "ABOUT US",
     headline: "Dignity, by design.",
-    sub: "Born from corporate success. Built for human impact.",
+    sub: "Built on responsibility. Designed for accountable social impact.",
   },
   whoWeAre: [
-    "SAHS Foundation is the humanitarian arm of the SAHS Group of Companies — a multi-national conglomerate dedicated to giving back to society. Founded in 2022 and registered as a non-profit trust (UP/2022/0307306), the foundation channels a major portion of the Group's profits directly into impactful programs that uplift the most vulnerable members of our communities across India and beyond.",
-    "We believe philanthropy works best when it is structural, not optional. That is why our funding does not depend on external donations to operate — every rupee we receive from public donors goes directly to programs, while operating costs are covered by the Group.",
+    "SAHS Foundation is a registered non-profit trust established in 2022 under registration number UP/2022/0307306.",
+    "The foundation is the social impact initiative of the SAHS Group, created to support structured, need-based, and accountable welfare programs. Our work focuses on community welfare, medical support, animal care, sanitation, environmental responsibility, and assistance for vulnerable groups.",
+    "We believe social impact should be delivered with care, documented with responsibility, and sustained through trusted partnerships. SAHS Foundation is supported by the SAHS Group's commitment to responsible enterprise and community development.",
   ],
   vision:
-    "A world where every human being — regardless of circumstance, gender, age, or ability — lives with dignity, agency, and hope.",
+    "A society where people, animals, and communities receive support with dignity, care, and opportunity.",
   mission:
-    "To channel corporate success into measurable social impact across eight core missions, reaching the most vulnerable members of our communities through transparent, ground-level programs.",
+    "To support structured, need-based social initiatives in community welfare, medical assistance, animal care, sanitation, environmental responsibility, and support for vulnerable groups.",
   values: [
-    { label: "Compassion", description: "Every program begins with empathy." },
-    { label: "Integrity", description: "100% transparent operations, zero profit motive." },
-    { label: "Dignity", description: "Beneficiaries are partners, never recipients of pity." },
-    { label: "Sustainability", description: "Successful models are scaled to create self-sustaining ecosystems." },
-    { label: "Service", description: "Driven by purpose, not publicity." },
+    { label: "Compassion", description: "Every initiative begins with empathy and respect." },
+    { label: "Integrity", description: "We maintain responsible records, clear processes, and accountable use of resources." },
+    { label: "Dignity", description: "People and communities are treated as partners in progress, not recipients of pity." },
+    { label: "Sustainability", description: "We support initiatives that can create lasting value beyond one-time assistance." },
+    { label: "Service", description: "Driven by purpose, responsibility, and quiet commitment." },
   ],
-  groupConnection:
-    "[TBD — short paragraph about SAHS Group: industries, geographies, philosophy of giving back. Will be provided.]",
+  groupConnection: {
+    eyebrow: "SAHS GROUP",
+    heading: "Built on responsible business.",
+    paragraphs: [
+      "SAHS Foundation is supported by the SAHS Group's commitment to responsible business and community development.",
+      "The Group's work in animal nutrition and allied life-sciences sectors gives the Foundation a practical understanding of rural communities, animal welfare, public health, and grassroots support needs.",
+      "The Foundation operates as a registered non-profit trust with its own welfare purpose, governance discipline, and program priorities.",
+      "Business creates capacity. The Foundation channels that capacity into accountable social impact.",
+    ],
+  },
   leadership: [] as Array<{ name: string; role: string; bio: string; photo?: string }>,
-  compliance: [
-    "Registered as a Non-Profit Trust in Uttar Pradesh",
-    "Registration Number: UP/2022/0307306",
-    "Annual reports available on request",
-    "All programs independently audited",
-  ],
 };
 
 export const initiatives = {
   hero: {
     eyebrow: "OUR INITIATIVES",
-    headline: "Eight pillars. One purpose.",
-    sub: "Each program is built around real, ground-level need — and delivered with measurable outcomes.",
+    headline: "Focused initiatives. One purpose.",
+    sub: "SAHS Foundation works across selected welfare areas where care, support, and responsible action can create meaningful community value.",
   },
   cta: {
     heading: "Want to support a specific initiative?",
@@ -117,41 +138,18 @@ export const initiatives = {
   },
 };
 
-export const impact = {
-  hero: {
-    eyebrow: "IMPACT & STORIES",
-    headline: "Real lives. Real change.",
-    sub: "Behind every program is a person whose life looks different today than it did yesterday.",
-  },
-  stories: [] as Array<{
-    name: string;
-    location: string;
-    pillar: string;
-    photo: string;
-    body: string[];
-    quote?: string;
-  }>,
-  press: [] as Array<{ name: string; logo: string; href?: string }>,
-  reports: [] as Array<{ year: number; title: string; href: string }>,
-};
-
 export const getInvolved = {
   hero: {
     eyebrow: "GET INVOLVED",
-    headline: "Three ways to make a difference.",
-    sub: "Whether you contribute resources, partner with us as an organisation, or give your time — every effort creates impact.",
+    headline: "Work with us to create responsible impact.",
+    sub: "Partner with SAHS Foundation, volunteer your time, or help us identify communities, individuals, animals, and institutions that need genuine support.",
   },
   pathways: [
     {
-      key: "donate" as const,
-      heading: "Donate",
-      label: "Support a Cause",
-      to: "#donate",
-      tone: "coral" as const,
-    },
-    {
       key: "partner" as const,
       heading: "Partner",
+      body:
+        "Partner on focused welfare initiatives across community support, animal care, health, sanitation, and environmental responsibility.",
       label: "Discuss Partnership",
       to: "#partner",
       tone: "teal" as const,
@@ -159,23 +157,22 @@ export const getInvolved = {
     {
       key: "volunteer" as const,
       heading: "Volunteer",
-      label: "Join Us",
+      body:
+        "Contribute your time, skills, or field support to initiatives where responsible participation can create meaningful value.",
+      label: "Volunteer With Us",
       to: "#volunteer",
       tone: "navy" as const,
     },
+    {
+      key: "refer" as const,
+      heading: "Refer a Need",
+      body:
+        "Help us identify individuals, communities, animals, or care institutions that may require genuine, need-based support.",
+      label: "Refer a Need",
+      to: "#refer",
+      tone: "coral" as const,
+    },
   ],
-  donate: {
-    heading: "Support a cause",
-    body:
-      "Every rupee you contribute goes directly to programs. Our operating costs are covered by the SAHS Group, ensuring 100% of public donations reach beneficiaries.",
-    tiers: [
-      { amount: "₹1,000", impact: "One month of medical support for one patient" },
-      { amount: "₹5,000", impact: "Skill training for one woman" },
-      { amount: "₹25,000", impact: "A borewell for a rural community" },
-      { amount: "Custom", impact: "Choose your own contribution" },
-    ],
-    paymentHref: "#" as string, // TBD payment gateway
-  },
   partner: {
     heading: "For corporates & CSR teams",
     body:
@@ -184,6 +181,11 @@ export const getInvolved = {
   volunteer: {
     heading: "Give your time",
     body:
-      "From medical camps to plantation drives, we welcome volunteers across all eight initiatives. Tell us a bit about yourself and we will match you with a programme that fits your skills and availability.",
+      "From medical camps to plantation drives, we welcome volunteers across all of our initiatives. Tell us a bit about yourself and we will match you with a programme that fits your skills and availability.",
+  },
+  refer: {
+    heading: "Refer a need",
+    body:
+      "If you know of an individual, community, animal, or care institution that may need support, share the details with us. We review every referral with care and respond where we can help.",
   },
 };

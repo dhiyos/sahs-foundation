@@ -26,8 +26,10 @@ export interface Pillar {
   pillar: PillarKey;
   title: string;
   short: string;
-  long: string;
-  whatWeDo: string;
+  tabLabel?: string;
+  sectionHeading?: string;
+  intro: string;
+  whatWeDo: string[];
   whoWeServe: string;
   icon: LucideIcon;
 }
@@ -36,101 +38,151 @@ export const pillars: Pillar[] = [
   {
     slug: "women-empowerment",
     pillar: "women",
-    title: "Women Empowerment",
-    short: "Education, skill development, self-employment & marriage assistance.",
-    long:
-      "Education, skill development, self-employment, marriage assistance, and holistic upliftment of deserving women across all ages. We believe empowering one woman creates ripples that transform entire families and communities.",
-    whatWeDo:
-      "Skill training, scholarship support, marriage assistance, livelihood enablement",
+    title: "Women's Welfare & Livelihoods",
+    short: "Support for education, skills, self-reliance, and dignity-led community assistance.",
+    tabLabel: "Women's Welfare",
+    sectionHeading: "Women's Welfare & Livelihoods",
+    intro:
+      "SAHS Foundation supports women and girls through education assistance, skill-building, livelihood enablement, and need-based welfare support. The focus is to encourage dignity, self-reliance, and timely assistance where support can improve family and community stability.",
+    whatWeDo: [
+      "Skill development support",
+      "Education and scholarship assistance",
+      "Livelihood and self-employment enablement",
+      "Need-based welfare assistance",
+    ],
     whoWeServe:
-      "Women across all ages and circumstances facing economic, social, or educational disadvantage",
+      "Women and girls facing economic, social, or educational disadvantage, identified through field inputs, local references, or trusted partners.",
     icon: User,
   },
   {
     slug: "medical-assistance",
     pillar: "medical",
     title: "Medical Assistance",
-    short: "Free medical aid, treatment support & healthcare access.",
-    long:
-      "Free medical aid, treatment support, and healthcare access for those who cannot afford it — across all ages and genders. From routine consultations to critical surgeries, we bridge the gap between need and care.",
-    whatWeDo:
-      "Free medical camps, treatment funding, hospital tie-ups, medication supply",
+    short: "Healthcare access, treatment support, medical camps, and essential care assistance.",
+    intro:
+      "SAHS Foundation supports need-based healthcare assistance for individuals and communities with limited access to timely medical care. Our focus includes medical camps, treatment support, essential medicines, and coordination with healthcare providers where appropriate.",
+    whatWeDo: [
+      "Medical camp support",
+      "Treatment assistance",
+      "Essential medicine support",
+      "Healthcare access facilitation",
+      "Hospital or clinic coordination, where required",
+    ],
     whoWeServe:
-      "Patients from underserved communities unable to afford private healthcare",
+      "Individuals and families from underserved communities who face financial, access, or emergency barriers to basic healthcare support.",
     icon: Plus,
   },
   {
     slug: "disability-support",
     pillar: "disability",
     title: "Disability Support",
-    short: "Rehabilitation, assistive aids, counselling & inclusive care.",
-    long:
-      "Physical and mental disability rehabilitation, assistive aids, counselling, and inclusive care programs across gender and age. Our work is rooted in inclusion — never sympathy.",
-    whatWeDo:
-      "Assistive device distribution, therapy support, counselling, inclusive education advocacy",
-    whoWeServe: "Persons with disabilities and their families",
+    short: "Assistive support, rehabilitation access, counselling, and inclusion-focused care.",
+    sectionHeading: "Disability Support & Inclusion",
+    intro:
+      "SAHS Foundation supports persons with disabilities through need-based assistance, access facilitation, assistive support, and inclusion-focused welfare initiatives. Our approach is rooted in dignity, accessibility, and practical support for individuals and their families.",
+    whatWeDo: [
+      "Assistive device support",
+      "Therapy and rehabilitation access facilitation",
+      "Counselling and family support",
+      "Education and inclusion support",
+      "Need-based welfare assistance",
+    ],
+    whoWeServe:
+      "Persons with disabilities and their families who require support in accessing care, rehabilitation, education, mobility, or essential welfare assistance.",
     icon: Accessibility,
   },
   {
     slug: "care-institutions",
     pillar: "care",
-    title: "Care Institutions",
-    short: "Essential supplies for orphanages, blind schools & homes.",
-    long:
-      "Essential supplies for orphanages, blind schools, old age homes, and disability centres across the region. Where institutions exist, we make them better.",
-    whatWeDo:
-      "Supply drives, infrastructure support, festival contributions, health camps",
-    whoWeServe: "Established care institutions and the residents they serve",
+    title: "Institutional Support",
+    short: "Essential supplies and support for orphanages, special schools, shelters, and care homes.",
+    sectionHeading: "Support for Care Institutions",
+    intro:
+      "SAHS Foundation supports care institutions that serve children, senior citizens, persons with disabilities, and vulnerable groups. Our assistance focuses on essential supplies, basic infrastructure support, health-related activities, and need-based welfare contributions.",
+    whatWeDo: [
+      "Essential supply support",
+      "Basic infrastructure assistance",
+      "Health and welfare camp support",
+      "Seasonal and need-based contributions",
+      "Coordination with care homes, shelters, and special institutions",
+    ],
+    whoWeServe:
+      "Care homes, shelters, orphanages, special schools, senior citizen homes, and institutions serving vulnerable communities.",
     icon: HomeIcon,
   },
   {
     slug: "water-sanitation",
     pillar: "water",
     title: "Water & Sanitation",
-    short: "Clean water, sanitation & hygiene infrastructure.",
-    long:
-      "Building sanitation facilities, clean drinking water access, and hygiene infrastructure for underserved communities. Dignity begins with the basics.",
-    whatWeDo:
-      "Borewells, water purification, toilet construction, hygiene awareness drives",
+    short: "Clean water, sanitation, hygiene infrastructure, and community health support.",
+    sectionHeading: "Water & Sanitation Support",
+    intro:
+      "SAHS Foundation supports access to clean water, basic sanitation, and hygiene awareness for underserved communities. Our focus is on practical, need-based interventions that improve health, dignity, and everyday living conditions.",
+    whatWeDo: [
+      "Clean drinking water support",
+      "Water purification assistance",
+      "Basic sanitation infrastructure support",
+      "Hygiene awareness initiatives",
+      "Need-based community health support",
+    ],
     whoWeServe:
-      "Rural and peri-urban communities lacking basic water and sanitation infrastructure",
+      "Rural and peri-urban communities facing limited access to clean water, sanitation facilities, or basic hygiene infrastructure.",
     icon: Droplet,
   },
   {
     slug: "animal-welfare",
     pillar: "animal",
     title: "Animal Welfare",
-    short: "Veterinary care, vaccination, sheltering & welfare.",
-    long:
-      "Veterinary care, vaccination drives, medication, sheltering, and compassionate welfare programs for animals in need. Compassion knows no species.",
-    whatWeDo:
-      "Stray animal sterilisation and vaccination, emergency veterinary aid, shelter support",
-    whoWeServe: "Stray, abandoned, and rescued animals",
+    short: "Veterinary care, vaccination support, shelter assistance, and welfare awareness.",
+    sectionHeading: "Animal Welfare Support",
+    intro:
+      "SAHS Foundation supports need-based animal welfare initiatives focused on care, health, shelter support, and humane treatment. Our work is especially aligned with the SAHS Group's broader understanding of animal health, rural ecosystems, and responsible care.",
+    whatWeDo: [
+      "Veterinary care support",
+      "Vaccination and sterilisation support, where arranged through qualified partners",
+      "Shelter and rescue support",
+      "Essential medicine and nutrition assistance",
+      "Animal welfare awareness initiatives",
+    ],
+    whoWeServe:
+      "Stray, abandoned, rescued, and community animals requiring care, treatment, shelter, or welfare support.",
     icon: PawPrint,
   },
   {
     slug: "environmental-care",
     pillar: "environment",
     title: "Environmental Care",
-    short: "Plantation drives, cleanups & community eco initiatives.",
-    long:
-      "Tree plantation drives, green space restoration, garbage cleaning, and community-led eco initiatives. We owe the planet what we owe each other.",
-    whatWeDo:
-      "Plantation drives, green space adoption, cleanup campaigns, eco-awareness programs",
+    short: "Plantation drives, cleanliness initiatives, waste awareness, and community environmental action.",
+    intro:
+      "SAHS Foundation supports community-led environmental initiatives focused on cleanliness, plantation, green spaces, and awareness. Our approach is practical and local: small, responsible actions that improve shared surroundings and encourage long-term civic responsibility.",
+    whatWeDo: [
+      "Plantation and green space support",
+      "Cleanliness and waste awareness initiatives",
+      "Community cleanup activities",
+      "Environmental awareness programs",
+      "Support for local eco-restoration efforts, where feasible",
+    ],
     whoWeServe:
-      "Local ecosystems and the communities that depend on them",
+      "Communities, public spaces, local institutions, and neighbourhood ecosystems that benefit from cleaner, greener, and healthier surroundings.",
     icon: TreePine,
   },
   {
     slug: "elder-care",
     pillar: "elder",
     title: "Elder Care",
-    short: "Dignity, companionship & support for senior citizens.",
-    long:
-      "Dedicated programs ensuring dignity, companionship, healthcare essentials, and support for senior citizens in need. Every elder deserves to be seen.",
-    whatWeDo:
-      "Old age home support, home visits, medical aid, companionship programs",
-    whoWeServe: "Senior citizens, especially those without family support",
+    short: "Support for senior citizens through care, companionship, dignity, and essential assistance.",
+    sectionHeading: "Elder Care Support",
+    intro:
+      "SAHS Foundation supports senior citizens through need-based assistance, care institution support, health-related help, and companionship-focused welfare initiatives. Our focus is to help elderly individuals live with dignity, comfort, and basic support.",
+    whatWeDo: [
+      "Senior citizen welfare support",
+      "Old age home and care institution assistance",
+      "Health and essential needs support",
+      "Companionship and community engagement initiatives",
+      "Need-based assistance for elderly individuals",
+    ],
+    whoWeServe:
+      "Senior citizens, especially those facing neglect, isolation, financial hardship, limited family support, or difficulty accessing basic care.",
     icon: Heart,
   },
 ];

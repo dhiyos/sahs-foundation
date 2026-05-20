@@ -20,12 +20,14 @@ const mapEmbed =
   encodeURIComponent(site.address.full) +
   "&output=embed";
 
+const referMailto = `mailto:${site.email}?subject=${encodeURIComponent("Refer a Need")}`;
+
 export default function GetInvolved() {
   return (
     <>
       <Seo
         title="Get Involved"
-        description="Donate, partner, or volunteer with SAHS Foundation. 100% of public donations reach programmes — operating costs are covered by the SAHS Group."
+        description="Partner with SAHS Foundation, volunteer your time, or refer a need from your community."
         path="/get-involved"
       />
       <Hero
@@ -51,8 +53,8 @@ export default function GetInvolved() {
                   <div className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/70">
                     {p.heading}
                   </div>
-                  <p className="font-serif text-[24px] md:text-[28px] leading-tight font-medium flex-1">
-                    {pathwayCopy[p.key]}
+                  <p className="font-serif text-[22px] md:text-[24px] leading-snug font-medium flex-1">
+                    {p.body}
                   </p>
                   <span
                     className={`inline-flex items-center justify-center px-5 py-2.5 rounded text-sm font-medium tracking-wide self-start transition ${styles.buttonClass}`}
@@ -66,48 +68,7 @@ export default function GetInvolved() {
         </Container>
       </section>
 
-      <section id="donate" className="bg-cream-50 py-16 md:py-24 scroll-mt-24">
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-            <div className="md:col-span-5">
-              <Eyebrow>DONATE</Eyebrow>
-              <h2 className="font-serif text-[28px] md:text-[36px] font-medium text-ink-900 leading-tight mb-5">
-                {getInvolved.donate.heading}
-              </h2>
-              <p className="text-base text-ink-600 leading-[1.7]">
-                {getInvolved.donate.body}
-              </p>
-              <div className="mt-8">
-                <Button href={getInvolved.donate.paymentHref} variant="primary">
-                  Donate Now
-                </Button>
-                <p className="mt-4 text-xs text-ink-400">
-                  100% of donations go directly to programs.
-                </p>
-              </div>
-            </div>
-            <div className="md:col-span-7">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {getInvolved.donate.tiers.map((t) => (
-                  <div
-                    key={t.amount}
-                    className="bg-white border border-ink-900/10 rounded-md p-6"
-                  >
-                    <div className="font-serif text-[28px] md:text-[32px] font-medium text-coral-600 leading-none">
-                      {t.amount}
-                    </div>
-                    <p className="mt-3 text-sm text-ink-600 leading-relaxed">
-                      {t.impact}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section id="partner" className="bg-white py-16 md:py-24 scroll-mt-24">
+      <section id="partner" className="bg-cream-50 py-16 md:py-24 scroll-mt-24">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
             <div className="md:col-span-5">
@@ -126,7 +87,7 @@ export default function GetInvolved() {
         </Container>
       </section>
 
-      <section id="volunteer" className="bg-cream-50 py-16 md:py-24 scroll-mt-24">
+      <section id="volunteer" className="bg-white py-16 md:py-24 scroll-mt-24">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
             <div className="md:col-span-5">
@@ -140,6 +101,28 @@ export default function GetInvolved() {
             </div>
             <div className="md:col-span-7">
               <VolunteerForm />
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section id="refer" className="bg-cream-50 py-16 md:py-24 scroll-mt-24">
+        <Container>
+          <div className="max-w-3xl">
+            <Eyebrow>REFER A NEED</Eyebrow>
+            <h2 className="font-serif text-[28px] md:text-[36px] font-medium text-ink-900 leading-tight mb-5">
+              {getInvolved.refer.heading}
+            </h2>
+            <p className="text-base text-ink-600 leading-[1.7] mb-8">
+              {getInvolved.refer.body}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Button href={referMailto} variant="primary">
+                Email Us a Referral
+              </Button>
+              <Button href="#contact" variant="secondary">
+                Other Ways to Reach Us
+              </Button>
             </div>
           </div>
         </Container>
@@ -214,12 +197,3 @@ export default function GetInvolved() {
     </>
   );
 }
-
-const pathwayCopy: Record<typeof getInvolved.pathways[number]["key"], string> = {
-  donate:
-    "Every rupee goes to the programme. Operating costs are covered by the SAHS Group.",
-  partner:
-    "Co-fund a programme, sponsor an initiative, or build a bespoke CSR engagement.",
-  volunteer:
-    "Bring your time, your skills, your hands. Match with a programme that fits.",
-};
