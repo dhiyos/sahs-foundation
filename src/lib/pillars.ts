@@ -10,6 +10,9 @@ import {
   Heart,
 } from "lucide-react";
 import type { PillarKey } from "../components/ui/PillarCard";
+import pillarWomenImg from "../assets/pillar-women.jpg";
+import pillarDisabilityImg from "../assets/pillar-disability.jpg";
+import pillarEnvironmentImg from "../assets/pillar-environment.jpg";
 
 export type PillarSlug =
   | "women-empowerment"
@@ -64,9 +67,9 @@ export const pillars: Pillar[] = [
       "Women and girls facing economic, social, or educational disadvantage, identified through field inputs, local references, or trusted partners.",
     icon: User,
     image: {
-      src: "https://plus.unsplash.com/premium_photo-1663039852183-847a142ab9df?auto=format&fit=crop&w=1600&q=80",
-      alt: "Indian woman working at a sewing machine in a tailoring workshop.",
-      credit: { name: "Unsplash", url: "https://unsplash.com/photos/3xgCAit9r18" },
+      src: pillarWomenImg,
+      alt: "Indian women in colourful sarees working together at sewing machines in a community tailoring workshop.",
+      credit: { name: "SAHS Foundation", url: "" },
     },
   },
   {
@@ -111,9 +114,9 @@ export const pillars: Pillar[] = [
       "Persons with disabilities and their families who require support in accessing care, rehabilitation, education, mobility, or essential welfare assistance.",
     icon: Accessibility,
     image: {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/National_Institute_For_Locomotor_Disabilities_01.jpg/1280px-National_Institute_For_Locomotor_Disabilities_01.jpg",
-      alt: "National Institute for Locomotor Disabilities, India — supporting persons with disabilities.",
-      credit: { name: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:National_Institute_For_Locomotor_Disabilities_01.jpg" },
+      src: pillarDisabilityImg,
+      alt: "Smiling Indian woman in a wheelchair being supported at a community assistive-device camp.",
+      credit: { name: "SAHS Foundation", url: "" },
     },
   },
   {
@@ -206,9 +209,9 @@ export const pillars: Pillar[] = [
       "Communities, public spaces, local institutions, and neighbourhood ecosystems that benefit from cleaner, greener, and healthier surroundings.",
     icon: TreePine,
     image: {
-      src: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Tree_Plantation_Drive.jpg",
-      alt: "Volunteers carrying out a tree plantation drive in India.",
-      credit: { name: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:Tree_Plantation_Drive.jpg" },
+      src: pillarEnvironmentImg,
+      alt: "Indian school children planting a tree sapling together during a community plantation drive.",
+      credit: { name: "SAHS Foundation", url: "" },
     },
   },
   {
