@@ -64,9 +64,9 @@ export const pillars: Pillar[] = [
       "Women and girls facing economic, social, or educational disadvantage, identified through field inputs, local references, or trusted partners.",
     icon: User,
     image: {
-      src: u("1753162659622-371949a713ec"),
-      alt: "Women working together at a tailoring workshop.",
-      credit: { name: "Unsplash", url: "https://unsplash.com/photos/yRnWq4U4S20" },
+      src: "https://plus.unsplash.com/premium_photo-1663039852183-847a142ab9df?auto=format&fit=crop&w=1600&q=80",
+      alt: "Indian woman working at a sewing machine in a tailoring workshop.",
+      credit: { name: "Unsplash", url: "https://unsplash.com/photos/3xgCAit9r18" },
     },
   },
   {
@@ -111,9 +111,9 @@ export const pillars: Pillar[] = [
       "Persons with disabilities and their families who require support in accessing care, rehabilitation, education, mobility, or essential welfare assistance.",
     icon: Accessibility,
     image: {
-      src: u("1778315599241-030773aa636b"),
-      alt: "Person in a wheelchair by a quiet forest lake.",
-      credit: { name: "Unsplash", url: "https://unsplash.com/photos/-HpZNMQwen0" },
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/National_Institute_For_Locomotor_Disabilities_01.jpg/1280px-National_Institute_For_Locomotor_Disabilities_01.jpg",
+      alt: "National Institute for Locomotor Disabilities, India — supporting persons with disabilities.",
+      credit: { name: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:National_Institute_For_Locomotor_Disabilities_01.jpg" },
     },
   },
   {
@@ -206,9 +206,9 @@ export const pillars: Pillar[] = [
       "Communities, public spaces, local institutions, and neighbourhood ecosystems that benefit from cleaner, greener, and healthier surroundings.",
     icon: TreePine,
     image: {
-      src: u("1776988931450-7377dead1ed0"),
-      alt: "Volunteers planting shrubs in a community garden.",
-      credit: { name: "Unsplash", url: "https://unsplash.com/photos/HuOHdWyR0g0" },
+      src: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Tree_Plantation_Drive.jpg",
+      alt: "Volunteers carrying out a tree plantation drive in India.",
+      credit: { name: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:Tree_Plantation_Drive.jpg" },
     },
   },
   {
