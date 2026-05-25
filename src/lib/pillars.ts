@@ -21,6 +21,12 @@ export type PillarSlug =
   | "environmental-care"
   | "elder-care";
 
+export interface PillarImage {
+  src: string;
+  alt: string;
+  credit: { name: string; url: string };
+}
+
 export interface Pillar {
   slug: PillarSlug;
   pillar: PillarKey;
@@ -32,7 +38,11 @@ export interface Pillar {
   whatWeDo: string[];
   whoWeServe: string;
   icon: LucideIcon;
+  image: PillarImage;
 }
+
+const u = (id: string) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1600&q=80`;
 
 export const pillars: Pillar[] = [
   {
@@ -53,6 +63,11 @@ export const pillars: Pillar[] = [
     whoWeServe:
       "Women and girls facing economic, social, or educational disadvantage, identified through field inputs, local references, or trusted partners.",
     icon: User,
+    image: {
+      src: u("1753162659622-371949a713ec"),
+      alt: "Women working together at a tailoring workshop.",
+      credit: { name: "Unsplash", url: "https://unsplash.com/photos/yRnWq4U4S20" },
+    },
   },
   {
     slug: "medical-assistance",
@@ -71,6 +86,11 @@ export const pillars: Pillar[] = [
     whoWeServe:
       "Individuals and families from underserved communities who face financial, access, or emergency barriers to basic healthcare support.",
     icon: Plus,
+    image: {
+      src: u("1779006277040-67543ea167b1"),
+      alt: "Hands applying medical ointment to a patient.",
+      credit: { name: "Unsplash", url: "https://unsplash.com/photos/LE0vyZoHwWY" },
+    },
   },
   {
     slug: "disability-support",
@@ -90,6 +110,11 @@ export const pillars: Pillar[] = [
     whoWeServe:
       "Persons with disabilities and their families who require support in accessing care, rehabilitation, education, mobility, or essential welfare assistance.",
     icon: Accessibility,
+    image: {
+      src: u("1778315599241-030773aa636b"),
+      alt: "Person in a wheelchair by a quiet forest lake.",
+      credit: { name: "Unsplash", url: "https://unsplash.com/photos/-HpZNMQwen0" },
+    },
   },
   {
     slug: "care-institutions",
@@ -109,6 +134,11 @@ export const pillars: Pillar[] = [
     whoWeServe:
       "Care homes, shelters, orphanages, special schools, senior citizen homes, and institutions serving vulnerable communities.",
     icon: HomeIcon,
+    image: {
+      src: u("1489942986787-cded4ecf962e"),
+      alt: "Two children embracing and laughing together.",
+      credit: { name: "Unsplash", url: "https://unsplash.com/photos/w6caoaJzXIE" },
+    },
   },
   {
     slug: "water-sanitation",
@@ -128,6 +158,11 @@ export const pillars: Pillar[] = [
     whoWeServe:
       "Rural and peri-urban communities facing limited access to clean water, sanitation facilities, or basic hygiene infrastructure.",
     icon: Droplet,
+    image: {
+      src: u("1604981338911-b7e37bcd3899"),
+      alt: "Water pouring from a wooden bucket.",
+      credit: { name: "Unsplash", url: "https://unsplash.com/photos/jeiPvWOlhs4" },
+    },
   },
   {
     slug: "animal-welfare",
@@ -147,6 +182,11 @@ export const pillars: Pillar[] = [
     whoWeServe:
       "Stray, abandoned, rescued, and community animals requiring care, treatment, shelter, or welfare support.",
     icon: PawPrint,
+    image: {
+      src: u("1779183802270-474920e26315"),
+      alt: "A rescued dog with an ear tag resting on grass.",
+      credit: { name: "Unsplash", url: "https://unsplash.com/photos/HwbYPIcdCBc" },
+    },
   },
   {
     slug: "environmental-care",
@@ -165,6 +205,11 @@ export const pillars: Pillar[] = [
     whoWeServe:
       "Communities, public spaces, local institutions, and neighbourhood ecosystems that benefit from cleaner, greener, and healthier surroundings.",
     icon: TreePine,
+    image: {
+      src: u("1776988931450-7377dead1ed0"),
+      alt: "Volunteers planting shrubs in a community garden.",
+      credit: { name: "Unsplash", url: "https://unsplash.com/photos/HuOHdWyR0g0" },
+    },
   },
   {
     slug: "elder-care",
@@ -184,6 +229,11 @@ export const pillars: Pillar[] = [
     whoWeServe:
       "Senior citizens, especially those facing neglect, isolation, financial hardship, limited family support, or difficulty accessing basic care.",
     icon: Heart,
+    image: {
+      src: u("1773234005378-ceebf3c877b9"),
+      alt: "Two hands holding each other gently in care.",
+      credit: { name: "Unsplash", url: "https://unsplash.com/photos/mwGrAl1X514" },
+    },
   },
 ];
 

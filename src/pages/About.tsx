@@ -50,8 +50,8 @@ export default function About() {
             <div className="md:col-span-2">
               <div className="aspect-[4/5] w-full overflow-hidden rounded-md bg-cream-50">
                 <img
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80"
-                  alt="Hands meeting in collaboration — placeholder, to be replaced with original beneficiary photography."
+                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80"
+                  alt="Hands meeting in collaboration."
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

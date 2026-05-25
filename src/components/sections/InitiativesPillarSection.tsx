@@ -50,20 +50,32 @@ export function InitiativesPillarSection({ pillar, alt }: InitiativesPillarSecti
       className={`scroll-mt-32 md:scroll-mt-40 py-16 md:py-20 ${alt ? "bg-cream-50" : "bg-white"}`}
     >
       <Container>
-        <div className="max-w-3xl">
-          <div
-            className="w-[60px] h-[60px] rounded-full flex items-center justify-center mb-6"
-            style={{ backgroundColor: tokens.border }}
-          >
-            <Icon className="w-7 h-7 text-white" strokeWidth={2} />
+        <div className={`grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start ${alt ? "md:[&>div:first-child]:order-2" : ""}`}>
+          <div className="md:col-span-7">
+            <div
+              className="w-[60px] h-[60px] rounded-full flex items-center justify-center mb-6"
+              style={{ backgroundColor: tokens.border }}
+            >
+              <Icon className="w-7 h-7 text-white" strokeWidth={2} />
+            </div>
+            <Eyebrow>{eyebrowLabel}</Eyebrow>
+            <h2 className="font-serif text-[28px] md:text-[36px] font-medium text-ink-900 leading-tight mb-5">
+              {heading}
+            </h2>
+            <p className="text-base md:text-lg text-ink-600 leading-[1.7]">
+              {pillar.intro}
+            </p>
           </div>
-          <Eyebrow>{eyebrowLabel}</Eyebrow>
-          <h2 className="font-serif text-[28px] md:text-[36px] font-medium text-ink-900 leading-tight mb-5">
-            {heading}
-          </h2>
-          <p className="text-base md:text-lg text-ink-600 leading-[1.7]">
-            {pillar.intro}
-          </p>
+          <div className="md:col-span-5">
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-md">
+              <img
+                src={pillar.image.src}
+                alt={pillar.image.alt}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl">
